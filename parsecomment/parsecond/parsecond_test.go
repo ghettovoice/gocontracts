@@ -64,6 +64,13 @@ func TestParseCondition(t *testing.T) {
 		},
 		{
 			expected: parsecond.Condition{
+				CondStr: "x < 100",
+			},
+			text:        "  -  x < 100",
+			description: "only condition string",
+		},
+		{
+			expected: parsecond.Condition{
 				Label:   "some label",
 				CondStr: "x < 100",
 			},

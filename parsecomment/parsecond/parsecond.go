@@ -28,7 +28,7 @@ type Condition struct {
 	Cond    ast.Expr
 }
 
-var bulletRe = regexp.MustCompile(`^\s*\*\s*(.*)\s*$`)
+var bulletRe = regexp.MustCompile(`^\s*[\*\-]\s*(.*)\s*$`)
 var labelWithCondRe = regexp.MustCompile(
 	`^([a-zA-Z0-9_;.\-=' ]+\s*:)([ \t^=]?.*)$`)
 
